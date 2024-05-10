@@ -1,39 +1,53 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	var N, M int
-	fmt.Scan(&N)
 
-	// Declarando e lendo os elementos do vetor V
-	V := make([]int, N)
-	for i := 0; i < N; i++ {
-		fmt.Scan(&V[i])
+	// Entrada de n inteiros:
+	var n, m int
+
+	fmt.Print("Digite o tamanho do vetor: ")
+	fmt.Scan(&n)
+
+	// Criando um slice (vetor) com n inteiros
+	v := make([]int, n)
+
+	// For para preencher o vetor v
+	fmt.Print("Digite os elementos do vetor: ")
+
+	for i := 0; i < n; i++ {
+		fmt.Scan(&v[i])
 	}
 
-	fmt.Scan(&M)
+	// Entrada de M inteiros qtd de buscas
+	fmt.Print("Digite a quantidade de buscas que deseja fazer: ")
+	fmt.Scan(&m)
 
-	// Realizando as buscas
-	for i := 0; i < M; i++ {
-		var num int
-		fmt.Scan(&num)
+	// Criando um slice (vetor) com m inteiros
+	v2 := make([]int, m)
 
-		// Verificando se o número está no vetor V
-		if busca(V, num) {
-			fmt.Println("ACHEI")
-		} else {
-			fmt.Println("NAO ACHEI")
+	// For para preencher o vetor v2
+	fmt.Print("Digite os elementos que deseja buscar: ")
+
+	for i := 0; i < m; i++ {
+		fmt.Scan(&v2[i])
+	}
+		
+	for i := 0; i < m; i++ {
+		for j := 0; j < n; j++ {
+			if v2[i] == v[j] {
+				fmt.Print("ACHEI! \n")
+				break
+			}
+			
+			if j == n - 1 {
+				fmt.Print("NÃO ACHEI \n")
+			}
 		}
-	}
-}
 
-// Função para buscar um número em um vetor
-func busca(V []int, num int) bool {
-	for _, v := range V {
-		if v == num {
-			return true
-		}
 	}
-	return false
+
 }
