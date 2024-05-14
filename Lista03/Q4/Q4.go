@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
+	
 	// Declaração das variáveis
 	var n int
 
