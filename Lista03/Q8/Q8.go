@@ -16,6 +16,7 @@ func main() {
 			
 			fmt.Printf("O número %d em binário é: %b \n", n, n)
 		} else {
+			fmt.Print("Encerrado.")
 			break
 		}
 	}
