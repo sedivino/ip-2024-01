@@ -48,8 +48,5 @@ func main() {
 		}
 	}
 
-	fmt.Println(v)
-	fmt.Println(w)
-	fmt.Println(maxV)
-	fmt.Println(minW)
+	fmt.Printf("\n%v \n%v \n%v \n%v", v, w, maxV, minW)
 }

@@ -28,5 +28,6 @@ func main() {
 		
 	fmt.Print(a)
 	fmt.Print(b)
+	fmt.Print()
 	
 }
