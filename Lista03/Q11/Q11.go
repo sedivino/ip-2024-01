@@ -6,7 +6,7 @@ import (
 
 func main() {
 	//Declaração de variáveis
-	var n int
+	var n, maxV, minW int
 
 	// Lendo o tamanho do vetor:
 	fmt.Print("Digite o tamanho do vetor: ")
@@ -22,15 +22,34 @@ func main() {
 		}
 	}
 	
-	// Criando e preenchendo um vetor de n elementos:
+	// Criando e preenchendo um vetor V de n elementos:
 	v := make([]int, n)
-	w := make([]int, n) // W é o vetor inverso.
-
+	maxV = 0
+	
 	fmt.Print("Digite os elementos do vetor: \n")
+	
 	for i := 0; i < n; i++ {
 		fmt.Scan(&v[i])
+
+		if v[i] > maxV {
+			maxV = v[i]
+		}
 	}
 	
-	fmt.Print(v)
-	fmt.Print(w)
+	// Vamos definir o vetor inverso W e o preencher
+	w := make([]int, n)
+	
+	for i := 0; i < len(v); i++ {
+		minW = w[0]
+		w[i]=v[len(v)-1-i]
+
+		if w[i] < minW {
+			minW = w[i]
+		}
+	}
+
+	fmt.Println(v)
+	fmt.Println(w)
+	fmt.Println(maxV)
+	fmt.Println(minW)
 }
