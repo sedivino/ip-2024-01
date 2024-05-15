@@ -35,7 +35,9 @@ func main() {
 	// Ordenando a lista:
 	sort.Ints(v)
 
-	// Imprimindo a lista inversa
-	fmt.Print(v)
+	// Imprimindo os elementos da lista
+	for _, num := range v {
+		fmt.Println(num)
+	}
 
 }
