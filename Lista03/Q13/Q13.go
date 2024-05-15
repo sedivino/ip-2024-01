@@ -37,11 +37,11 @@ func main() {
 	}
 
 	// Encontrar o elemento que mais se repete
-	maiorElemento := v[0]
+	elementoMaisFrequente := v[0]
 	maiorFrequencia := frequencia[v[0]]
 	for _, elemento := range v {
 		if frequencia[elemento] > maiorFrequencia {
-			maiorElemento = elemento
+			elementoMaisFrequente = elemento
 			maiorFrequencia = frequencia[elemento]
 		}
 	}
