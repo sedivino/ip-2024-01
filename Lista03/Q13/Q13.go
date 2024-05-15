@@ -47,5 +47,5 @@ func main() {
 	}
 
 	// Imprimir o elemento que mais se repete
-	fmt.Printf("O elemento que mais se repete é %d, que aparece %d vezes.\n", maiorElemento, maiorFrequencia)
+	fmt.Printf("O elemento que mais se repete é %d, que aparece %d vezes.\n", elementoMaisFrequente, maiorFrequencia)
 }
