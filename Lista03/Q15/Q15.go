@@ -45,7 +45,8 @@ func main() {
 		for j := 0; j < n; j++ {
 			fmt.Scan(&v[j])
 		}
-		
+
+				
 		
 	}
 
